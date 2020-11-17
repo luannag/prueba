@@ -1,0 +1,93 @@
+* {
+margin: 0px;
+padding: 0px;
+}
+
+body{
+	background-color: #f2f2f2;
+	
+}
+
+
+img{
+width: 20%;
+margin: 10px 0 10px 0; 
+float: center;
+}
+
+
+
+.cabecera{
+	background-color: #E63C2F;
+	width:100%;
+}
+
+.cabecera img{
+width: 20%;
+margin: 10px 0 10px 0; 
+float: center;
+}
+
+.cabecera a {
+font-family: arial;
+color: white;
+font-size: 18px;
+}
+
+.nav a:hover {
+font-family: arial;
+color: black;
+}
+
+.dropdown-menu a{
+color: black;
+
+}
+/**************************************/
+
+h3{
+font-size: 20px;
+font-family: arial black;
+padding: 10px;
+margin-bottom: 0px;
+}
+
+  hr{
+	 background: white;	
+	 
+}
+
+.contact-form{
+	background:rgba(0,0,0 , .5);
+	color:white;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	}
+
+.contact-form	p{
+		text-align: justify;
+		}
+		
+
+/**************************************/
+
+#Pie{
+	width: 100%;
+	background-color: #262626;
+	font-family: Arial;
+	color: white;
+	padding: 10px;
+}
+
+#Pie h2{
+	font-size: 25px;
+	font-family: Arial;
+}
+
+#Pie p{
+	font-size: 15px;
+}
+
+#Pie a{
+	color: white;
+}
