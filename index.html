@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Página Contacto - Academia"/>
+	<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"/>
+	<meta name="author" content="Luanna González"/>
+	<link rel="stylesheet" href="css/styleContacto.css">
+	<title>BeGurus</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	
+</head>
+
+<body>
+
+	<header>
+	<div class="cabecera">
+		
+		 <center><img src="img/B.JPG" alt="Logo"/> </center>
+	
+		 <nav class="navbar navbar-expand-md navbar-dark bg-dark" >
+       
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav text-center">
+                <a href="#" class="nav-item nav-link active">Inicio</a>
+                <a href="#" class="nav-item nav-link active">Conócenos</a>
+          
+			    <div class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Cursos  </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="HDI.html">Gestión para centros de soporte</a>
+          <a class="dropdown-item" href="PMI.html">Administración de proyectos</a>
+          <a class="dropdown-item" href="ITIL.html">Gestión de servicios de TI</a>
+		  <a class="dropdown-item" href="SixSigma.html">Iassc Lean - Six Sigma</a>
+        </div>
+      </div>
+	    <a href="#" class="nav-item nav-link active">Eventos</a>
+        <a href="#" class="nav-item nav-link active">Contacto</a>
+		  </div>
+        </div>
+    </nav>
+		
+		</div>
+	</header>
+
+	<div class="container contact-form" >
+	<h3  style="padding-bottom: 0px;">Contáctanos</h3>
+	<hr style="margin-top: 0px;">
+
+	<div class="row">
+	
+       <div class="col-md-6">
+			<p>Correo: info@begurus.org </p>
+			<p>WhatsApp: +506 622 000 77 </p>
+			<p> Ubicación: BeeWorking, Heredia, Costa Rica 	</p>
+       </div>
+
+       <div class="col-md-6">
+	   
+       	<form action="enviar.php" method="post" class="form_contact" >
+		
+         <div class="form-group">
+         	<label>Nombre</label>
+         	<input type="text" name="nombre" required class="form-control" >
+         </div>
+		 
+		 <p>Género:
+			<input type="radio" name="hm" value="h" required> Hombre
+			<input type="radio" name="hm" value="m" required> Mujer
+		</p>
+		
+		  <div class="form-group">
+				<label>Fecha de Nacimiento</label>
+				<input type='date' id='miEdad'  name="fecha" required  class="form-control" >
+				<br>
+				<center><button type="button" onclick="Edad();" class="btn btn-light" >Calcular edad</button><center>
+				<p id= "Edadcalculada">  </p>
+         </div>
+		 
+         <div class="form-group">
+			<p> Email:
+				<input type="email" id="email" required  class="form-control">
+				<span id="emailOK"></span>
+			</p> 
+         </div>
+
+         <div class="form-group">
+         	<label>Mensaje</label>
+         	<textarea  rows="4" name="mensaje" required class="form-control"></textarea>
+         </div>
+		 
+         <div class="form-group">
+         	 <center> <button type="submit" class="btn btn-light" >Enviar</button></center>
+         </div>
+		</form>
+       </div>
+    </div>
+	
+</div>
+	<footer>
+	<div id= "Pie">
+
+		<br>
+			<center> <h2>BeGurus</h2>
+				<p> Servicio al cliente  
+			<br>
+			WhatsApp: +506 622 000 77  | Correo: info@begurus.org 
+			<br>
+			 <a href="index.html">Inicio</a> | <a href="Conocenos.html">Conócenos</a> | <a href="Eventos.html">Eventos</a> | <a href="Contacto-html">Contacto</a> | <a href="Autor.html">Autor</a> | <a href="ComoLlegar.html">Ubicación</a>
+				<br>
+			Copyright &copy; 2020 | Luanna González Artavia </p> </center>
+	</div>
+		</footer>
+	
+		 <script src="js/ArchivoJS.js" ></script>
+		 
+		 
+		 <script>
+		 
+		document.getElementById('email').addEventListener('input', function() {
+		campo = event.target;
+		valido = document.getElementById('emailOK');
+			
+		emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+		if (emailRegex.test(campo.value)) {
+					valido.innerText = "válido";
+		} else {
+					valido.innerText = "incorrecto";
+		}
+	});
+
+	</script>
+
+</body>
+</html>
